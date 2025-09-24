@@ -60,3 +60,30 @@
 .p3img{
     width:500px;
 }
+
+.p1, .p2, .p3 {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 22px;
+    padding: 12px;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+    transition: 0.3s;
+    overflow: hidden; /* For internal effects */
+}
+
+.p1:hover, .p2:hover, .p3:hover {
+    animation: glitch 0.5s;
+}
+
+.p1 h3, .p2 h3, .p3 h3 {
+    font-family: "UnifrakturMaguntia", cursive; /* Gothic headings */
+    color: #39FF14;
+    text-shadow: 0 0 10px #000000;
+}
+
+.p1img, .p2img, .p3img {
+    width: 500px;
+    filter: brightness(0.8) contrast(1.2); /* Darken for gothic feel */
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff00ff;
+}
