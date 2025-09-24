@@ -1,134 +1,149 @@
-body{
-    font-family: "Montserrat", sans-serif;
-    font-weight:190;
-    color:white;
-    background-color:black;
-    margin:0 auto;
+body {
+    font-family: "VT323", monospace; /* Hacker terminal font for body text */
+    font-weight: 190;
+    color: #ffffff; /* White text */
+    background-color: #000000; /* Black base */
+    margin: 0 auto;
+    background-image: url('https://example.com/circuit-board-pattern.png'); /* Subtle circuit board background (find a free dark one on Unsplash) */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
 }
-.mh1{
-    font-weight:250;
-    font-family: "Mozilla Text", sans-serif;
-    text-align:center;
-    font-size:30px;
-    transition:.2s;
+
+/* Scanline overlay for hacker vibe */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.05) 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 1;
 }
-.mh1:hover{
-    color:#39FF14;
-    font-size:32px;
+
+.mh1 {
+    font-family: "UnifrakturMaguntia", cursive; /* Gothic font for headings */
+    font-weight: 250;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.2s;
+    text-shadow: 0 0 10px #39FF14; /* Neon glow */
 }
-.mp1{
+
+.mh1:hover {
+    color: #39FF14; /* Neon green */
+    font-size: 32px;
+    animation: glitch 0.5s infinite; /* Glitch effect on hover */
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); color: #ff00ff; } /* Purple glitch */
+    40% { transform: translate(2px, -2px); color: #ff0000; } /* Red glitch */
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.mp1, .mp2 {
     text-align: center;
     margin-left: 33%;
-    width:500px;
-    font-size:20px;
-}
-.mp2{
-    text-align: center;
-    margin-left: 33%;
-    width:500px;
-    font-size:20px;
-    margin-top:5%;
-}
-.d1{
-    margin-top:30%;
-}
-.logo{
-    width:200px;
-    margin-left:44%;
-}
-.breaker{
-    margin:10%;
+    width: 500px;
+    font-size: 20px;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5); /* Subtle green glow */
 }
 
-
-.nbar{
-    text-align:center;
-    align-items:center;
-    margin-top:2%;
-}
-.nba{
-    text-decoration:none;
-    color:white;
-    padding:2%;
-    font-size:25px;
-    font-weight:250;
-    font-family: "Mozilla Text", sans-serif;
-    transition:.2s;
-    margin:20px;
-}
-.nba:hover{
-    color:#39FF14;
-}
-.homeico{
-    margin-top:2%;
-    width:70px;
-}
-form input{
-    text-align:center;
-    border:1px #39FF14 solid;
-    margin:2%;
-    font-size:25px;
-    background-color:#2b2b2b;
-    opacity:70%;
-    border-radius: 25px;
-    box-shadow:none;
-    color:white;
-    transition:.2s;
-    font-family:  "Mozilla Text", sans-serif;
-}
-form select{
-    text-align:center;
-    border:1px #39FF14 solid;
-    margin:2%;
-    font-size:25px;
-    background-color:#2b2b2b;
-    opacity:70%;
-    border-radius: 25px;
-    box-shadow:none;
-    color:white;
-    transition:.2s;
-    font-family:  "Mozilla Text", sans-serif;
-    padding-left:10px;
-    padding-right:10px;
-}
-form select:hover{
-    border:1px #2b2b2b solid;
-}
-form select:focus{
-    border:1px #2b2b2b solid;
-}
-
-option{
-    color: white;
-    font-family: "Mozilla Text", sans-serif ;
-}
-form input:focus{
-    outline:none;
-    border:1px #2b2b2b solid;
-}
-form input:hover{
-    border:1px #2b2b2b solid;
-}
-form{
+.nbar {
     text-align: center;
     align-items: center;
-    font-family:  "Mozilla Text", sans-serif;
+    margin-top: 2%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent for depth */
+    padding: 10px;
+    box-shadow: 0 0 20px #39FF14;
 }
-.subbtn{
-    font-family:  "Mozilla Text", sans-serif;
+
+.nba {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 2%;
+    font-size: 25px;
+    font-family: "UnifrakturMaguntia", cursive; /* Gothic nav */
+    transition: 0.2s;
+    margin: 20px;
+}
+
+.nba:hover {
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14;
+    animation: glitch 0.3s;
+}
+
+.homeico {
+    margin-top: 2%;
+    width: 70px;
+    filter: drop-shadow(0 0 5px #39FF14); /* Glow on logo */
+}
+
+form input, form select {
+    text-align: center;
+    border: 1px solid #39FF14;
+    margin: 2%;
+    font-size: 25px;
+    background-color: #1a1a1a; /* Darker gray for inputs */
+    opacity: 0.9;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    color: #ffffff;
+    transition: 0.2s;
+    font-family: "VT323", monospace; /* Hacker font */
+}
+
+form input:hover, form select:hover, form input:focus, form select:focus {
+    border: 1px solid #ff00ff; /* Purple gothic accent on hover/focus */
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.subbtn {
+    font-family: "VT323", monospace;
     font-size: 25px;
     border-radius: 25px;
-    border:1px #39ff14 solid;
-    padding-left:10px;
-    padding-right:10px;
-    background-color:#2b2b2b;
-    color:white;
-    transition:.2s;
+    border: 1px solid #39FF14;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: 0.2s;
 }
-.subbtn:hover{
-    border:1px #2b2b2b solid;
-}
-.textleft{
-    width:400px;
 
+.subbtn:hover {
+    border: 1px solid #ff0000; /* Red gothic hover */
+    background-color: #000000;
+    box-shadow: 0 0 20px #ff0000;
+    animation: glitch 0.5s;
+}
+
+/* Raining code background for hacker vibe (add to body or specific sections) */
+.raining-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.raining-code span {
+    position: absolute;
+    color: rgba(57, 255, 20, 0.5);
+    font-size: 20px;
+    white-space: nowrap;
+    animation: rain 10s linear infinite;
+}
+
+@keyframes rain {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
 }
