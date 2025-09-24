@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="TRNTL LOGO 1.png ">
+    <title>TRNTL | Info </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="nbar">
+        <a class="nba" href="Packages.html">Packages</a>
+        <a href="Home.html"><img class="homeico" src="TRNTLLOGO1SHORT.png" alt="Logo-gradient"></a>
+        <a class="nba" href="Inquiries.html">Inquiries</a>
+    </div>
+    <p class="mp2">For our packages we take payment in cryptocurrency. This is for the most privacy and safety between payments. This also allows us to receive fast payments from practically anywhere in the world.</p>
+    <p class="textleft">When you submit your enquiry you must also send the payment to:</p>
+    <p>0xhjhjhjhjhjhjhhjjhjhjhjhjhjkjkjkljkijku</p>
+    <form method="post" action="Inquiries.php">
+        <div>
+            <label for="aon"></label><input type="text" id="aon" name="aon" placeholder="Name or Alias" required>
+        </div>
+        <div>
+            <label for="email"></label><input type="text" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="walletaddr"></label><input type="text" id="walletaddr" name="walletaddr" placeholder="Wallet Address (Etherium)" maxlength="42" required>
+        </div>
+        <div>
+            <label>
+                <select name="ptype" required>
+                    <option value="" selected disabled>Select Package</option>
+                    <option value="1">Account Research</option>
+                    <option value="2">File Extraction</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <button class="subbtn" type="submit">Submit</button>
+        </div>
+    </form>
+    <div class="breaker"></div>
+
+</body>
+</html>
